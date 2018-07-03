@@ -49,6 +49,7 @@ class Board extends Component {
   }
 
   render () {
+    console.log('board')
     return (
       <div>
         <div className="board-row">
@@ -85,8 +86,8 @@ class Game extends Component {
     }
   }
 
-  handelClick (i,e) {
-    console.log(e.target)
+  handelClick = (i,e) => {
+    console.log(this)
     let history = this.state.history.slice(0, this.state.stepNumber + 1);
     const curSquare = history[this.state.stepNumber];
     const square = history[this.state.stepNumber].slice();
@@ -131,7 +132,7 @@ class Game extends Component {
         <div className="game-board">
           <Board
             square={square}
-            onClick={(i, e) => this.handelClick(i, e)}
+            onClick={this.handelClick}
           />
         </div>
         <div className="game-info">
