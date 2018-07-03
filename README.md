@@ -25,6 +25,6 @@ this.handleClick = this.handleClick.bind(this);
 
 // 方法三：属性初始化器语法
 handleClick = () => {
-    console.log('this is:', this);
+  console.log('this is:', this);
 }
 ```
